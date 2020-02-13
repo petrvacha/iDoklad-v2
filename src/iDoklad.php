@@ -139,11 +139,13 @@ class iDoklad {
     }
 
     /**
-     * Check if iDokladCredential object has valid informations
+     * Check if iDokladCredential object has valid information
      * @throws iDokladException
      */
     private function checkAuthToken(){
-        if(empty($this->iDokladAuth->getCredentials()) || empty($this->iDokladAuth->getCredentials()->getAccessToken()) || (empty($this->iDokladAuth->getCredentials()->getRefreshToken()) && $this->iDokladAuth->getCredentials()->getAuthType() === iDokladAuth::AUTH_TYPE_OAUTH2)){
+        if(empty($this->iDokladAuth->getCredentials()) ||
+	        (empty($this->iDokladAuth->getCredentials()->getAccessToken()) && !$this->iDokladAuth->getCredentials()->isExpired()) ||
+	        (empty($this->iDokladAuth->getCredentials()->getRefreshToken()) && $this->iDokladAuth->getCredentials()->getAuthType() === iDokladAuth::AUTH_TYPE_OAUTH2)){
             throw new iDokladException('Invalid credentials');
         }
         if($this->iDokladAuth->getCredentials()->isExpired()){
