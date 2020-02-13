@@ -6,7 +6,7 @@
  * @author Jan Malcanek
  */
 
-namespace malcanek\iDoklad;
+namespace petrvacha\iDoklad;
 
 include_once __DIR__.'/auth/iDokladAuth.php';
 include_once __DIR__.'/auth/iDokladCredentials.php';
@@ -16,13 +16,13 @@ include_once __DIR__.'/request/iDokladResponse.php';
 include_once __DIR__.'/request/iDokladFilter.php';
 include_once __DIR__.'/request/iDokladSort.php';
 
-use malcanek\iDoklad\auth\iDokladAuth;
-use malcanek\iDoklad\iDokladException;
-use malcanek\iDoklad\request\iDokladRequest;
-use malcanek\iDoklad\request\iDokladResponse;
-use malcanek\iDoklad\auth\iDokladCredentials;
-use malcanek\iDoklad\request\iDokladFilter;
-use malcanek\iDoklad\request\iDokladSort;
+use petrvacha\iDoklad\auth\iDokladAuth;
+use petrvacha\iDoklad\iDokladException;
+use petrvacha\iDoklad\request\iDokladRequest;
+use petrvacha\iDoklad\request\iDokladResponse;
+use petrvacha\iDoklad\auth\iDokladCredentials;
+use petrvacha\iDoklad\request\iDokladFilter;
+use petrvacha\iDoklad\request\iDokladSort;
 
 class iDoklad {
 
