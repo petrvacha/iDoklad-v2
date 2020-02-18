@@ -6,9 +6,9 @@
  * @author Jan Malcanek
  */
 
-namespace malcanek\iDoklad\auth;
+namespace petrvacha\iDoklad\auth;
 
-use malcanek\iDoklad\iDokladException;
+use petrvacha\iDoklad\iDokladException;
 
 class iDokladAuth {
 
@@ -80,7 +80,7 @@ class iDokladAuth {
     /**
      * Chooses authenticate method and gets credentials
      * @param string $authType
-     * @param \malcanek\iDoklad\auth\iDokladCredentials $credentials
+     * @param \petrvacha\iDoklad\auth\iDokladCredentials $credentials
      * @throws iDokladException
      */
     public function auth($authType = self::AUTH_TYPE_OAUTH2, iDokladCredentials $credentials = null) {
@@ -221,7 +221,7 @@ class iDokladAuth {
 
     /**
      * Sets iDokladCredentials to provide authentication
-     * @param \malcanek\iDoklad\auth\iDokladCredentials $credentials
+     * @param \petrvacha\iDoklad\auth\iDokladCredentials $credentials
      */
     public function setCredentials(iDokladCredentials $credentials){
         $this->credentials = $credentials;

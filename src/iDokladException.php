@@ -6,7 +6,7 @@
  * @author Jan Malcanek
  */
 
-namespace malcanek\iDoklad;
+namespace petrvacha\iDoklad;
 use Exception;
 
 class iDokladException extends Exception {

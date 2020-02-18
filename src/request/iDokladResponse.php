@@ -5,8 +5,8 @@
  * @author honza
  */
 
-namespace malcanek\iDoklad\request;
-use malcanek\iDoklad\iDokladException;
+namespace petrvacha\iDoklad\request;
+use petrvacha\iDoklad\iDokladException;
 
 class iDokladResponse {
     

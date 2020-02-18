@@ -4,9 +4,9 @@ $cs = 'Your client secret from user settings';
 
 include_once 'v2/iDoklad.php';
             
-use malcanek\iDoklad\iDoklad;
-use malcanek\iDoklad\auth\iDokladCredentials;
-use malcanek\iDoklad\iDokladException;
+use petrvacha\iDoklad\iDoklad;
+use petrvacha\iDoklad\auth\iDokladCredentials;
+use petrvacha\iDoklad\iDokladException;
 
 try{
     $iDoklad = new iDoklad($cid, $cs, '');
@@ -18,7 +18,7 @@ try{
     } 
     $credentials = new iDokladCredentials(file_get_contents('credentials.json'), true);
     $iDoklad->setCredentials($credentials);
-    $request = new \malcanek\iDoklad\request\iDokladRequest('IssuedInvoices');
+    $request = new \petrvacha\iDoklad\request\iDokladRequest('IssuedInvoices');
     $response = $iDoklad->sendRequest($request);
     echo '<pre>';
     print_r($response);

@@ -12,9 +12,9 @@ Zadáme naše client ID, client secret a v případě, že chceme použít OAuth
 ```php
 include_once 'src/iDoklad.php';
             
-use malcanek\iDoklad\iDoklad;
-use malcanek\iDoklad\auth\iDokladCredentials;
-use malcanek\iDoklad\iDokladException;
+use petrvacha\iDoklad\iDoklad;
+use petrvacha\iDoklad\auth\iDokladCredentials;
+use petrvacha\iDoklad\iDokladException;
 
 $clientId = 'Your client ID';
 $clientSecret = 'Your client secret';
